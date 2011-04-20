@@ -1,17 +1,17 @@
+<?xml version="1.0"?>
 <app>
-	<id>myp2p-boxee-app</id>
-	<name>MyP2P</name>
-	<version>1.0.0</version>
-	<description>Boxee application for easy access to MyP2P live streams.</description>
-	<thumb>http://yourdomain.com/yourapp/images/thumb.png</thumb>
-	<repository>http://r.jakewharton.com/boxee/</repository>
-	<media>video</media>
-	<copyright>Jake Wharton</copyright>
-	<author>Jake Wharton</author>
-	<email>jakewharton@gmail.com</email>
-	<type>skin</type>
-	<startWindow>14000</startWindow>
-	<platform>all</platform>
-	<minversion>0.9.11</minversion>
-	<test-app>true</test-app>
+  <id>myp2p-boxee-app</id>
+  <name>MyP2P</name>
+  <version>1.0.0</version>
+  <description>Categorized and easily accessible MyP2P live streams of major sporting events.</description>
+  <thumb>https://github.com/JakeWharton/myp2p-boxee-app/raw/master/icon.png</thumb>
+  <repository>http://r.jakewharton.com/boxee</repository>
+  <media>video</media>
+  <copyright>Jake Wharton</copyright>
+  <email>jakewharton@gmail.com</email>
+  <type>skin</type>
+  <platform>all</platform>
+  <minversion>0.9.11</minversion>
+  <startWindow>14000</startWindow>
+  <test-app>true</test-app>
 </app>

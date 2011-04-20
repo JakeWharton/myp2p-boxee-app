@@ -1,18 +1,97 @@
 <?xml version="1.0"?>
+<window type="window" id="14000">
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <onload lang="python">
+<![CDATA[
 
-<window type="window" id="1001">
-	<defaultcontrol always="true">100</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+import helpers
+helpers.loadSports(9000)
 
-	<controls>
-		<control type="group">
-			<control type="image">
-				<posx>0</posx>
-				<poxy>0</poxy>
-				<width>1280</width>
-				<height>720</height>
-				<texture>bg_main.png</texture>
-			</control>
-		</control>
-	</controls>
+]]>
+  </onload>
+  <controls>
+    <control type="group">
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1280</width>
+        <height>720</height>
+        <texture>bg_main.720.png</texture>
+      </control>
+      <control type="list" id="9000">
+        <posx>30</posx>
+        <posy>70</posy>
+        <width>680</width>
+        <height>650</height>
+        <onright>6001</onright>
+        <orientation>vertical</orientation>
+        <itemlayout height="80">
+          <control type="label">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>640</width>
+            <height>90</height>
+            <font>font30</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>FF000000</textcolor>
+            <selectedcolor>FF9f1801</selectedcolor>
+            <wrapmultiline>true</wrapmultiline>
+          </control>
+        </itemlayout>
+        <focusedlayout height="80">
+          <control type="label">
+            <visible>!Control.HasFocus(9000)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>640</width>
+            <height>90</height>
+            <font>font30b</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>FF9f1801</textcolor>
+            <selectedcolor>FF9f1801</selectedcolor>
+            <wrapmultiline>true</wrapmultiline>
+          </control>
+          <control type="label">
+            <visible>Control.HasFocus(9000)</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>640</width>
+            <height>90</height>
+            <font>font30b</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+            <textcolor>FF9f1801</textcolor>
+            <selectedcolor>FF9f1801</selectedcolor>
+            <wrapmultiline>true</wrapmultiline>
+          </control>
+        </focusedlayout>
+        <!--content type="url" url="rss://vimcasts.org/feeds/boxee-quicktime/"/-->
+      </control>
+    </control>
+    <control type="group">
+      <control type="label">
+        <visible>true</visible>
+        <posx>730</posx>
+        <posy>165</posy>
+        <width>520</width>
+        <height>430</height>
+        <font>light23</font>
+        <align>left</align>
+        <aligny>top</aligny>
+        <label>[B]$INFO[Container(9000).ListItem.Label][/B]</label>
+        <background>white</background>
+        <textcolor>DD272727</textcolor>
+        <wrapmultiline>true</wrapmultiline>
+      </control>
+    </control>
+    <control type="group" id="6001">
+      <include>Common_Now_Playing</include>
+    </control>
+  </controls>
 </window>
