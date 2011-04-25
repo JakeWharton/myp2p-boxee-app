@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <app>
-  <id>myp2p-boxee-app</id>
+  <id>com.jakewharton.boxee.myp2p</id>
   <name>MyP2P</name>
-  <version>1.0.0</version>
+  <version>1.0</version>
   <description>Categorized and easily accessible MyP2P live streams of major sporting events.</description>
   <thumb>https://github.com/JakeWharton/myp2p-boxee-app/raw/master/icon.png</thumb>
   <repository>http://r.jakewharton.com/boxee</repository>
@@ -13,5 +13,4 @@
   <platform>all</platform>
   <minversion>0.9.11</minversion>
   <startWindow>14000</startWindow>
-  <test-app>true</test-app>
 </app>

@@ -1,15 +1,7 @@
 <?xml version="1.0"?>
-<window type="window" id="14000">
+<window type="window" id="14001">
   <defaultcontrol always="true">9000</defaultcontrol>
   <allowoverlay>no</allowoverlay>
-  <onload lang="python">
-<![CDATA[
-
-import helpers
-helpers.loadSports()
-
-]]>
-  </onload>
   <controls>
     <control type="group">
       <control type="image">
@@ -19,6 +11,20 @@ helpers.loadSports()
         <height>720</height>
         <texture>bg_main.720.png</texture>
       </control>
+      <control type="label" id="9010">
+        <posx>300</posx>
+        <posy>20</posy>
+        <width>800</width>
+        <height>50</height>
+        <font>font40</font>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label></label>
+        <textcolor>FF000000</textcolor>
+        <wrapmultiline>false</wrapmultiline>
+      </control>
+    </control>
+    <control type="group">
       <control type="list" id="9000">
         <posx>30</posx>
         <posy>70</posy>
@@ -76,7 +82,7 @@ helpers.loadSports()
 <![CDATA[
 
 import helpers
-helpers.sportClicked()
+helpers.gameClicked()
 
 ]]>
           </onclick>
