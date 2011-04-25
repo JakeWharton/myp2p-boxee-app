@@ -47,8 +47,16 @@ if test_app is not None:
     descriptor.getroot().remove(test_app)
     with open(os.path.join(app_path, 'descriptor.xml'), 'w') as f:
         f.write(ElementTree.tostring(descriptor.getroot()))
+else:
+    shutil.copy(descriptor_file, app_path)
 
 #Zip application
-target = zipfile.ZipFile(app_zip, 'w')
-target.write(app_path)
-target.close()
+target = None
+try:
+    target = zipfile.ZipFile(app_zip, 'w')
+    target.write(app_path)
+except:
+    try:
+        target.close()
+    except:
+        pass
